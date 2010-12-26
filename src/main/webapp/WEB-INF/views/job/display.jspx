@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" 
+		xmlns:spring="http://www.springframework.org/tags" 
+		xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+		xmlns:c="http://java.sun.com/jsp/jstl/core"
+		version="2.0">
+  <jsp:output omit-xml-declaration="yes"/>
+  <spring:message code="label_job_index" var="title"/>
+  <spring:url var="appirioLogo" value="/resources/images/appirioLogo.png" />
+  <util:panel id="title" title="${job.jobTitle}">
+    <spring:message code="application_name" var="app_name"/>
+    
+    <img src="${appirioLogo}" width="150" />
+    
+    <h3>${job.jobTitle}</h3>
+    
+    <p><a href="/AppirioCareers/job/${job.id}/sms">Tell a Friend!</a><br/>
+    <a href="/AppirioCareers/job/${job.id}/print" target="_blank">Print this Job</a></p>
+    
+    <h4>Duties</h4>
+    <p>${job.duties}</p> 
+
+    <h4>Preferred Skills/Experience</h4>
+    <p>${job.skills}</p> 
+    
+    <h4>Location</h4>
+    <p>${job.location}</p> 
+    
+    <h4>Salary and Benefits</h4>
+    <p>${job.salary}</p> 
+    
+    <h4>Next Steps</h4>
+    <p><ul>
+		<li>Submit your application and resume to Appirio.</li>
+		<li>Successful candidates will be interviewed via telephone, then in person.</li>
+	</ul></p> 
+
+  </util:panel>
+</div>

@@ -1,0 +1,10 @@
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-12-03 06:42:44
+project --topLevelPackage com.appirio.jobs --projectName AppirioCareers --java 6
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-12-03 06:42:46
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log opened at 2010-12-03 06:42:50
+controller all --package ~.web
+controller class --class ~.web.HomeController
+controller class --class ~.web.JobController
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+controller class --class ~.web.OAuthController
+// Spring Roo 1.1.0.RELEASE [rev 793f2b0] log closed at 2010-12-03 10:38:35

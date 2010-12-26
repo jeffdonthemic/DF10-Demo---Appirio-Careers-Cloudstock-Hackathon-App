@@ -1,0 +1,65 @@
+<div xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+  <jsp:output omit-xml-declaration="yes" />
+  <spring:message var="app_name" code="application_name" />
+  <spring:message var="title" code="welcome_titlepane" arguments="${app_name}" />
+  <spring:url var="appirioLogo" value="/resources/images/appirioLogo.png" />
+  <spring:url var="box" value="/resources/images/Box.png" />
+  <spring:url var="force" value="/resources/images/Force.png" />
+  <spring:url var="mongo" value="/resources/images/MongoDB.png" />
+  <spring:url var="twilio" value="/resources/images/Twilio.png" />
+  <spring:url var="vmware" value="/resources/images/VMWare.png" />
+  <util:panel id="title" title="${title}">
+  
+  	<img src="${appirioLogo}" width="200" />
+  
+    <h3>
+      <spring:message code="welcome_h3" arguments="${app_name}" />
+    </h3>
+    <p>Appirio is a cloud solution provider offering products and professional services 
+    that help enterprises accelerate their adoption of cloud applications and platforms. 
+    Appirio's innovation and expertise has been recognized by BusinessWeek as one of America's 
+    Most Promising Start-ups and by AlwaysOn as the On-Demand Company of the Year. Appirio 
+    has helped more than 180 leading enterprises implement, build and manage mission critical 
+    cloud solutions using salesforce.com, Google, Workday and Amazon. We are proud to serve 
+    a wide range of customers such as Avago, the City of Los Angeles, Diversey, Dunkin Brands, 
+    Flextronics, Japan Post Network, Ltd., IMS Health, Motorola, Qualcomm, RehabCare, Safety 
+    Kleen, Starbucks and VMware, as well as the 5,000 companies that use Appirio's products 
+    to connect and extend cloud platforms. Founded in 2006, Appirio has offices in the U.S. 
+    and Japan, and is backed by Sequoia Capital and GGV Capital.</p>
+    
+    <h2>See appirio.com/careers to apply online!</h2>
+    
+    <a href="/AppirioCareers/oauth/start">View our jobs!</a>
+    
+    <div style="padding-top:25px"/>
+    
+    <table width="100%">
+    <tr>
+    	<th>Partner</th>
+    	<th>How Used?</th>
+    </tr>
+    <tr>
+    	<td><img src="${box}" /></td>
+    	<td>Store pdf job descriptions on Box for download by applicants.</td>
+    </tr>
+    <tr>
+    	<td><img src="${force}" /></td>
+    	<td>Use Force.com as the datastore for open jobs. Access to Force.com using OAuth2 and the REST API.</td>
+    </tr>
+    <tr>
+    	<td><img src="${mongo}" /></td>
+    	<td>Store metrics for jobs on MongoHQ.</td>
+    </tr>
+    <tr>
+    	<td><img src="${twilio}" /></td>
+    	<td>Send a job to a friend via SMS.</td>
+    </tr>
+    <tr>
+    	<td><img src="${vmware}" /></td>
+    	<td>Application built using Spring STS, Spring Roo and Spring MVC. The application runs locally on tc Server.</td>
+    </tr> 
+    </table>
+    
+    
+  </util:panel>
+</div>

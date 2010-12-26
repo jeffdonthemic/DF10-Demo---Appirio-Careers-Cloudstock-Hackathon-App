@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" 
+		xmlns:spring="http://www.springframework.org/tags" 
+		xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+		xmlns:c="http://java.sun.com/jsp/jstl/core"
+		xmlns:form="http://www.springframework.org/tags/form"
+		version="2.0">
+  <jsp:output omit-xml-declaration="yes"/>
+  <spring:message code="label_job_index" var="title"/>
+  <util:panel id="title" title="SMS sent about ${job.jobTitle}">
+    <spring:message code="application_name" var="app_name"/>
+
+    <h3>${job.jobTitle}</h3>
+    
+    <p>Thanks for passing this position along!</p>
+   
+    <p>The following message has been sent to ${phone}:</p>
+    
+    <blockquote><i><strong>${message}</strong></i></blockquote>
+    
+    <p><br/><br/><a href="/AppirioCareers/oauth/start">Back to the list of positions.</a></p>
+    
+  </util:panel>
+</div>

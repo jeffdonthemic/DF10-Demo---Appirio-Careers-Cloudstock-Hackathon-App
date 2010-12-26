@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" 
+		xmlns:spring="http://www.springframework.org/tags" 
+		xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+		xmlns:c="http://java.sun.com/jsp/jstl/core"
+		version="2.0">
+  <jsp:output omit-xml-declaration="yes"/>
+  <spring:message code="label_job_index" var="title"/>
+  <util:panel id="title" title="${title}">
+    <spring:message code="application_name" var="app_name"/>
+    <h3>
+      <spring:message arguments="${app_name}" code="welcome_titlepane"/>
+    </h3>
+
+    <table width="100%" cellpadding="2" cellspacing="2">
+    <tr>
+    	<th>Job</th>
+    	<th>Title</th>
+    	<th>Location</th>
+    </tr>
+    <c:forEach items="${jobs}" var="job">
+    <tr>
+    	<td width="100"><a href="/AppirioCareers/job/${job.id}/display">${job.name}</a></td>
+    	<td>${job.jobTitle}</td>
+    	<td>${job.location}</td>
+    </tr>
+    </c:forEach>
+    </table>
+
+
+  </util:panel>
+</div>
